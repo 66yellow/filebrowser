@@ -67,7 +67,7 @@ WantedBy=multi-user.target
 		mkdir -p /etc/filebrowser
 		cat >/etc/filebrowser/filebrowser.json <<-EOF
 {
-    "port": 9184,
+    "port": 80,
     "baseURL": "",
     "address": "",
     "log": "stdout",
@@ -84,7 +84,7 @@ WantedBy=multi-user.target
 		echo -e "
 		Filebrowser 安装完成啦！
 
-		预览地址: ${yellow}http://${ip}:9184/$none
+		预览地址: ${yellow}http://${ip}:80/$none
 
 		用户名: ${green}admin$none
 
