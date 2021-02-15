@@ -10,6 +10,10 @@ openssl req -newkey rsa:2048 -nodes -keyout domain.key -x509 -days 365 -out doma
 
 其中选项-x509告诉req子命令创建一个自签名的证书。-days 365 选项指定证书的有效期为365天。继续回答 CSR 信息提问，完成该过程。
 
+acme.sh --install-cert -d abc.com --ecc \
+--cert-file      /etc/filebrowser/crt.crt  \
+--key-file       /etc/filebrowser/key.key
+
 # RPC 服务 SSL/TLS 加密, 默认：false
 # 启用加密后必须使用 https 或者 wss 协议连接
 # 不推荐开启，建议使用 web server 反向代理，比如 Nginx、Caddy ，灵活性更强。
